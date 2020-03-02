@@ -4,7 +4,7 @@
     text = "Hello there Gymothy";
     note.addText(text);
 
-    assert.isTrue(note.content === "Hello there Gymothy")
+    assert.isTrue("Can add a note", note.content === "Hello there Gymothy")
   };
 
   testNoteCanBeAdded();
