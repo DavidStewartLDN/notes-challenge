@@ -26,6 +26,6 @@
 
   exports.Note = Note
 
-  // the final this runs the code
+  // the final "this" runs the code
 
 })(this);

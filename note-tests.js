@@ -1,12 +1,10 @@
-(function(exports) {
-  function testNoteCanBeAdded() {
+
+describe("#Note", () => {
+  it('can add a  note', () => {
     var note = new Note();
-    text = "Hello there Gymothy";
+    text = "My favourite language is JavaScript";
     note.addText(text);
-
-    assert.isTrue("Can add a note", note.content === "Hello there Gymothy")
-  };
-
-  testNoteCanBeAdded();
-})();
+    expect(note.content).toBe("My favourite language is JavaScript")
+  })
+});
 
