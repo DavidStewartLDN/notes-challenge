@@ -13,7 +13,7 @@
     ending = "</div></li>"
 
     this.noteList.allNotes.forEach(element => {
-       this.output.push((beginning + element.showNote() + ending).toString())
+       this.output.push((beginning + element.showNote().substring(0, 20) + ending).toString())
     });
     return("<ul>"+(this.output.join(""))+"</ul>")
   

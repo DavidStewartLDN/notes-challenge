@@ -1,8 +1,6 @@
 (function(exports) {
 
   function SingleNoteViewer(note) {
-    console.log(note)
-    console.log(this)
     this.note = note
     
     
