@@ -12,12 +12,14 @@
     beginning = "<li><div>"
     ending = "</div></li>"
 
+    // use # to stay on same page in href link below
+
     this.noteList.allNotes.forEach(element => {
-       this.output.push((beginning + element.showNote().substring(0, 20) + ending).toString())
+       this.output.push((beginning + `<a href="#notes/${element.id}">` + element.showNote().substring(0, 20) + '</a>' + ending).toString())
     });
+
     return("<ul>"+(this.output.join(""))+"</ul>")
   
-    // return beginning + this.noteList.allNotes[0].showNote() + ending
   }
 
 

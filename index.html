@@ -13,5 +13,28 @@
   <script src='./src/note-list-model.js'></script>
   <script src='./src/note-list-view.js'></script>
   <script src="./src/note-controller.js"></script>
+  <script>
+    makeUrlChangeShowNoteForCurrentPage();
+
+    function makeUrlChangeShowNoteForCurrentPage() {
+      window.addEventListener("hashchange", showNoteForCurrentPage);
+    };
+
+    function showNoteForCurrentPage() {
+      showNote(getNoteFromUrl(window.location));
+    };
+
+    function getNoteFromUrl(location) {
+      return location.hash.split("#")[1];
+    };
+
+    function showNote(note) {
+      document
+        .getElementById("app")
+        .innerHTML = noteController.findNoteById(note);
+    };
+  </script>
 </body>
 </html>
+
+ <!-- .innerHTML = noteController.findNoteById(note); -->

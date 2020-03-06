@@ -2,8 +2,6 @@
 
   function SingleNoteViewer(note) {
     this.note = note
-    
-    
   };
   
   SingleNoteViewer.prototype.sendHTMLStringToId = function() {
